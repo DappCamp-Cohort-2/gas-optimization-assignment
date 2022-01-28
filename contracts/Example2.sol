@@ -4,8 +4,10 @@ contract Example2 {
     uint public counter;
  
     function incrementBy(uint[] calldata arr) public {
+        uint temp;
         for (uint idx = 0; idx < arr.length; idx++){
-            counter += arr[idx];
+            temp += arr[idx];
         }
+        counter = temp;
     }
 }
