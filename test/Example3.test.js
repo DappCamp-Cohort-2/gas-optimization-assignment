@@ -28,6 +28,7 @@ describe("Example3", function () {
 
   it("should pass the gas test", async function() {
     const currentGas = (await example.estimateGas.getOwnerMargin(amount)).toNumber();
+    console.log(currentGas);
     assert(currentGas < BASE_GAS);
   });
 });
