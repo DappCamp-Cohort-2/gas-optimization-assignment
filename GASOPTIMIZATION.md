@@ -1,9 +1,11 @@
+<!-- https://betterprogramming.pub/how-to-write-smart-contracts-that-optimize-gas-spent-on-ethereum-30b5e9c5db85 -->
+
 Gas optimization Techniques
 
 1. Variable packing - ensure that variables that we are trying to pack do not exceed the 32 byte limit
 2. Data Location - you will not save space by packing function arguments / local variables
 3. Reference data types - More gas efficient to initialize a tightly packed struct with separate assignments
-4. Memory vs. Storage - Call data is always cheaper tha nstorage (manipulate loca memory variable before assigning it to storage variable)
+4. Memory vs. Storage - Call data is always cheaper than storage (manipulate loca memory variable before assigning it to storage variable)
 5. Array size - Fixed size variables are cheaper than dynamic ones (same for strings)
 6. Mapping vs. Array - Mapping almost always better, unless it's a smaller data types
 7. Initializing - uint256 value; is cheaper than uint256 value = 0;.

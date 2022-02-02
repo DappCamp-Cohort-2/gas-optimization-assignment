@@ -10,7 +10,7 @@ describe("Example3", function () {
   beforeEach("deploy contract", async () => {
     const Example = await ethers.getContractFactory("Example3");
     example = await Example.deploy();
-    
+
     await example.deployed();
   });
 
@@ -26,8 +26,11 @@ describe("Example3", function () {
     expect(amountForSender).to.equal(70);
   });
 
-  it("should pass the gas test", async function() {
-    const currentGas = (await example.estimateGas.getOwnerMargin(amount)).toNumber();
+  it("should pass the gas test", async function () {
+    const currentGas = (
+      await example.estimateGas.getOwnerMargin(amount)
+    ).toNumber();
+    console.log("The current gas costs are " + currentGas);
     assert(currentGas < BASE_GAS);
   });
 });
