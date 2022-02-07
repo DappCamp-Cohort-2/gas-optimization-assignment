@@ -9,10 +9,11 @@
     "hardhat": "^2.8.3"
   },
   "dependencies": {
-    "@primitivefi/hardhat-marmite": "^0.0.4"
+    "@primitivefi/hardhat-marmite": "^0.0.4",
+    "npm": "^8.4.1"
   },
   "scripts": {
-		"compile": "npx hardhat compile",
-		"test": "npx hardhat test"
-	}
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test"
+  }
 }
